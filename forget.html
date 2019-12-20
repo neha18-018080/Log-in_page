@@ -23,22 +23,33 @@
         <div class="title forgot-password">
             Forgot Password
         </div>
+        <span id="error-msg"></span>
         <div class="msg-1">Please enter your email address below and we will send you information to change your password.</div>
         <div class="input-fields">
           <label class="label text-align-left">Email Address</label>
-          <input type="text" class="input">
+          <input type="text" id="emailID" class="input">
         </div>
         <br/>
         <div class="sign-up">
           <a href="index.html">Login</a>
         </div>
 
-        <div class="btn">
+        <div class="btn" onclick="submit()">
           Send
         </div>
       </div>
     </div>
   </div>
+
+  <script>
+    function submit(){
+      if(document.getElementById('emailID').value == ''){
+        document.getElementById('error-msg').innerHTML = "Please enter Email Id";
+        setTimeout(() => {
+          document.getElementById('error-msg').innerHTML = '';
+        }, 3000);
+      }
+    } </script>
 
 </body>
 
