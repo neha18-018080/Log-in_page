@@ -21,23 +21,24 @@
       <div class="title">
          Sign-Up form
       </div>
+      <span id="error-msg"></span>
       <div class="input-fields">
         <label class="label">First Name</label>
-        <input type="text" class="input">
+        <input type="text" id="fname" class="input">
       </div>
       <div class="input-fields">
         <label class="label">Last Name</label>
-        <input type="text" class="input">
+        <input type="text" id="lname" class="input">
       </div>
 
       <div class="input-fields">
         <label class="label">Email</label>
-        <input type="text" class="input">
+        <input type="email" id="email" class="input">
       </div>
 
       <div class="input-fields">
         <label class="label">Mobile No</label>
-        <input type="text" class="input">
+        <input type="number" id="mobileno" class="input">
       </div>
 
 
@@ -45,7 +46,7 @@
         Already have an account?<a href="index.html"> Login</a>
       </div>
       <br/><br/><br/>
-      <div class="btn">
+      <div class="btn" onclick="signup()">
         login
       </div>
     </div>
@@ -53,4 +54,37 @@
 </div>	
 	
 </body>
+
+<script>
+  function signup(){
+    if(document.getElementById('fname').value == ''){
+      document.getElementById('error-msg').innerHTML = "Please enter first name";
+      setTimeout(() => {
+        document.getElementById('error-msg').innerHTML = '';
+      }, 3000);
+    }
+    else 
+    if(document.getElementById('lname').value == ''){
+      document.getElementById('error-msg').innerHTML = "Please enter last name";
+      setTimeout(() => {
+        document.getElementById('error-msg').innerHTML = '';
+      }, 3000);
+    }
+    else 
+    if(document.getElementById('email').value == ''){
+      document.getElementById('error-msg').innerHTML = "Please enter email id";
+      setTimeout(() => {
+        document.getElementById('error-msg').innerHTML = '';
+      }, 3000);
+    }
+    else
+    if(document.getElementById('mobileno').value == ''){
+      document.getElementById('error-msg').innerHTML = "Please enter mobile number";
+      setTimeout(() => {
+        document.getElementById('error-msg').innerHTML = '';
+      }, 3000);
+    }
+  
+  } </script>
+
 </html>
