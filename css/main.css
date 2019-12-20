@@ -74,7 +74,7 @@ body {
 .login-form .forgot a {
   color: #bdbdbd;
   font-size: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .login-form .sign-up{
@@ -131,11 +131,19 @@ body {
   }
 
   .login-form .forgot {
-    margin-bottom: 55px;
+    margin-bottom: 0px;
   }
   .btn {
     margin-top: 40px;
     padding: 10px;
     position: fixed;
   }
+}
+
+.forgot-password{
+  font-size: 16px !important;
+}
+.msg-1{
+  font-size: 12px;
+  margin: 25px 0px;
 }
