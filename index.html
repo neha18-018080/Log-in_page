@@ -23,13 +23,14 @@
         <div class="title">
           login form
         </div>
+        <span id="error-msg"></span>
         <div class="input-fields">
           <label class="label text-align-left">Username</label>
-          <input type="text" class="input">
+          <input type="text" id="username" class="input">
         </div>
         <div class="input-fields">
           <label class="label text-align-left">Password</label>
-          <input type="text" class="input">
+          <input type="password" id="password" class="input">
         </div>
         <div class="forgot">
           <a href="forget.html">Forgot Password?</a>
@@ -39,7 +40,7 @@
           Don't have an account <a href="signup.html">Sign Up</a>
         </div>
 
-        <div class="btn">
+        <div class="btn" onclick="login()">
           login
         </div>
       </div>
@@ -48,4 +49,21 @@
 
 </body>
 
+<script>
+function login(){
+  if(document.getElementById('username').value == ''){
+    document.getElementById('error-msg').innerHTML = "Please enter username";
+    setTimeout(() => {
+      document.getElementById('error-msg').innerHTML = '';
+    }, 3000);
+  }
+  else 
+  if(document.getElementById('password').value == ''){
+    document.getElementById('error-msg').innerHTML = "Please enter password";
+    setTimeout(() => {
+      document.getElementById('error-msg').innerHTML = '';
+    }, 3000);
+  }
+
+} </script>
 </html>
